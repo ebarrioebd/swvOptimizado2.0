@@ -1,8 +1,6 @@
 .easyPrintHolder .a3CssClass {
     background-image: url(data:image/svg+xml;utf8;base64,PD9...go=);
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+} 
 
 /*.map {
     position: sticky !important;
@@ -12,7 +10,9 @@
 #head_main {
     height: 5.5vh !important;
 }
-
+#center_main{
+    height:59vh;
+}
 body,
 html,
 .container {
@@ -59,6 +59,11 @@ h1 {
 }
 
 p { 
+
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que no cabe */
+    text-overflow: ellipsis; /* Muestra "..." cuando el texto no cabe */ 
+
     font-size: 12px;
     font-family: "Fredoka", sans-serif;
 }
@@ -665,7 +670,7 @@ h1 {
 }
 
 #validacioncruzada {
-font-size: medium; */
+font-size: medium; 
     display: block;
     width: 87%;
     height: 510px;

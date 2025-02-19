@@ -32,13 +32,7 @@ function getArrayNomCol(_json) {
         <div  style=" padding-top: 4px;" ><input class="boxCSV" checked type="checkbox" value="${_json[i][0].gid}" id=""></div>
         <div  style=" width:100%;      margin-left: 10px; padding: 0">
         <select id="${_json[i][0].gid}-CSV" class="cCSV" onChange="ir_url(this)">
-        <option ><marquee loop="40">${_json[i][0].nom_col}</marquee></option>
-        <optgroup style="display:none" id="optgroup" label="Geostadisticos">
-        <option value='[{"option":"interpolacion","zona":"${_json[i][0].nom_col}","zona_id":"${_json[i][0].gid}"}]' id="option"><a href="">- Interpolación</a></option>
-        </optgroup>
-        <optgroup style="display:none" id="optgroup" label="Estadisticos">
-        <option value='[{"option":"descriptivo","zona":"${_json[i][0].nom_col}","zona_id":"${_json[i][0].gid}"}]' id="option">- Descriptios</option>
-        </optgroup>
+        <option >${_json[i][0].nom_col}</option> 
     </select>
     </div>
     </div>

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose")s
 const Schema = mongoose.Schema
 const ZonasGeo = new Schema({
     type: String,
