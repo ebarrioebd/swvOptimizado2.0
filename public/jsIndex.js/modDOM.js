@@ -20,3 +20,10 @@ function actServer() {
             console.log('Hubo un problema con la petición Fetch:' + error.message);
         });
 }
+let div_cont = document.getElementById("cont");
+function disabled_touch_div_maps(){   
+    div_cont.classList.add("div-disabled");
+}
+function enabled_touch_div_maps(){  
+    div_cont.classList.remove("div-disabled");
+}

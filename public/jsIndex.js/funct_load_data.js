@@ -16,10 +16,12 @@ let _json =[];//guarda todos los datos del archivo csv
 function fileSelect() {
     document.getElementById("cont").style.filter = "blur(14px)";
     document.getElementById("filecsv").style.display = "";
+    disabled_touch_div_maps()
 }//colors//rango
 function closedivCSV() {
     document.getElementById("cont").style.filter = "blur(0px)";
     document.getElementById("filecsv").style.display = "none";
+    enabled_touch_div_maps()
 }
 //shows NomCol SELECT
 
@@ -84,7 +86,7 @@ function datoValido(dat) {
     }
     return true; 
 }
-function csv_a_json(csv) {
+function csv_a_json(csv) { 
     let json = [];
     let datos_invalidos =[];
     csv.forEach(value => {
@@ -148,9 +150,7 @@ function getDataCSV() {
         checkselect.forEach(element => {
             data_ovi_csv.push(_json.filter((elem)=> elem[0].gid === element)[0])
         });
-        document.getElementById("cont").style.filter = "blur(0px)";
-        document.getElementById("filecsv").style.display = "none";  
-
+        closedivCSV() 
         indicadores(data_ovi_csv, checkselect, "type_csv"); 
     } else {
         alert("Seleccione una Colonia.")

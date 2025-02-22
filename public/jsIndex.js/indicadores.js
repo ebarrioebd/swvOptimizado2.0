@@ -64,12 +64,13 @@ function colorRGB() {
 function mostrarVentanaEstDesc() {
     document.getElementById("cont").style.filter = "blur(14px)"
     document.getElementById("ventanaEstDesc").style.display = ""
-
+    disabled_touch_div_maps();
 }
 
 function closeTableDescri() {
     document.getElementById("cont").style.filter = "blur(0px)"
     document.getElementById("ventanaEstDesc").style.display = "none"
+    enabled_touch_div_maps();
 }
 
 function createTablaDescriptivos(data) {

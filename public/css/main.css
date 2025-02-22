@@ -2,6 +2,9 @@
     background-image: url(data:image/svg+xml;utf8;base64,PD9...go=);
 } 
 
+.div-disabled{
+    pointer-events: none;  
+  }
 /*.map {
     position: sticky !important;
     width: 100%;

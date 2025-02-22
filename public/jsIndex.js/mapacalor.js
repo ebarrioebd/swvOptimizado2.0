@@ -102,7 +102,9 @@ function creaImagen(A, B, zi, id, imgOpcion) {
   return canvas.toDataURL("image/png");
 }
 
+//cierra la ventana de interpolacion
 function closeWCSVInter() {
+  enabled_touch_div_maps();
   document.getElementById("interpolarCSV").style.top = "";
   document.getElementById("ventana_seleccionar_p").style.display = "none";
 }
@@ -799,6 +801,7 @@ function crearMapaDeCalor(zonaV, m_i) {
 }
 
 function mapaCalor(n, id, f, type_dat, m_interpolacion) {
+  disabled_touch_div_maps()
   if (type_dat === "type_bd") {
     //si se analiza desde la bd
     ir_url(n, id, "type_bd", m_interpolacion);
