@@ -413,6 +413,7 @@ function cancelar_interpolacion() {
 }
 
 function interpolar(metodo) {
+  enabled_interpolarCSV_div()
   document.getElementById("ventana_seleccionar_p").style.display = "none";
   //reinicia Porcentaje de interpolcaion en div ventana
   document.getElementById("porcentajeInterpolar").innerHTML = "";
