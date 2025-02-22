@@ -196,7 +196,7 @@ function addTablaIndicador(data) {
   }
   botonesControlInfo.onAdd = function () {
     // creación de los botones
-    var botones = L.DomUtil.create("div", "class-css-botones");
+    var botones = L.DomUtil.create("div", "class-css-botones div-disabled");
     //botones.style.width=22+"%"
     botones.innerHTML +=
       "<div class='row' style='background:white;width: 200px;'>" +
@@ -697,6 +697,9 @@ function cancelar_vc() {
 }
 
 function validacionCruzada(metodo_interpolador) {
+  disabled_interpolarCSV_div()
+  disabled_touch_div_maps()
+
   document.getElementById("ventana_seleccionar_p").style.display = "none"; //cerrar div de seleccionar paramatro p en IDW
   document.getElementById("divProgressVC").style.display = ""; //div que contiene a process bar
   var file_vc_path =
@@ -957,11 +960,15 @@ function ocultarIMG() {
 //});
 //funcion para cerrar la ventana del semivariograma
 function closeVariograma() {
+  enabled_interpolarCSV_div();
+
   document.getElementById("interpolarCSV").style.filter = "blur(0px)";
   document.getElementById("id_variograma").style.display = "none";
 }
 
 function showVariograma() {
+  disabled_interpolarCSV_div() ;
+
   document.getElementById("id_variograma").style.display = "";
   document.getElementById("interpolarCSV").style.filter = "blur(5px)";
 }
@@ -979,6 +986,7 @@ function dIMG() {
 }
 
 function closeError() {
+  enabled_interpolarCSV_div();
   document.getElementById("validacioncruzada").style.display = "none";
 }
 
